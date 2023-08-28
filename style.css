@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+html { scroll-behavior: smooth; --scroll: 0; }
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: #222222;
+
+    font-size: 1vw;
+    letter-spacing: -0.02vw;
+}
+
+::-moz-selection { /* Firefox */
+  color: black;
+  background-color: white;
+}
+::selection {
+  color: black;
+  background-color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3vw;
+    letter-spacing: -0.15vw;
+    text-align: center;
+    pointer-events: none;
+}
+
+@keyframes hidden-animation {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+@keyframes text-reveal {
+    0% {
+        transform: translate(0, 100%);
+        clip-path: inset(0% 100% 100% 100%);
+    }
+    100% {
+        transform: translate(0, 0);
+        clip-path: inset(100% 100% 100% 100%);
+    }
+}
+@keyframes text-reveal-overflow {
+    0% {
+        clip-path: inset(100% 100% 100% 100%);
+    }
+    100% {
+        clip-path: inset(125% 100% 100% 100%);
+    }
+}
+
+@keyframes fade-to-white {
+    0%      { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+@keyframes hover {
+    0%      { padding-top: 3vh; }
+    50%     { padding-top: 4vh; }
+    100%    { padding-top: 3vh; }
+}
+
+.contact-icon {
+    font-size: 2vw;
+}
+
+.arrow-icon {
+    position: absolute;
+    padding-top: 3vh;
+
+    animation:          hidden-animation 1s, fade-to-white 1s 1s, hover 1s 1s infinite;
+    -moz-animation:     hidden-animation 1s, fade-to-white 1s 1s, hover 1s 1s infinite;
+    -webkit-animation:  hidden-animation 1s, fade-to-white 1s 1s, hover 1s 1s infinite;
+    animation-timing-function: ease-out;
+}
+
+.horizontal-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.horizontal-list li {
+    float: left;
+    padding: 0 0.5vw 0 0.5vw;
+}
+
+#intro {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    pointer-events: none;
+}
+
+#intro h1 {
+    font-size: 8vw;
+    letter-spacing: -0.4vw;
+    text-align: right;
+    line-height: 0;
+    padding-top: 5%;
+    padding-bottom: 1.9%;
+
+    clip-path: inset(125% 100% 100% 100%);
+    animation:          hidden-animation 0.3s, text-reveal 0.4s 0.3s, text-reveal-overflow 0.1s 0.7s;
+    -moz-animation:     hidden-animation 0.3s, text-reveal 0.4s 0.3s, text-reveal-overflow 0.1s 0.7s;
+    -webkit-animation:  hidden-animation 0.3s, text-reveal 0.4s 0.3s, text-reveal-overflow 0.1s 0.7s;
+    animation-timing-function: ease-out;
+}
+
+#about {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+#about > span {
+    display: flex;
+}
+#about > span div {
+    font-size: 1.5vw;
+    letter-spacing: -0.075vw;
+    font-weight: bold;
+
+    animation:          hidden-animation 0.8s, fade-to-white 1s 0.8s;
+    -moz-animation:     hidden-animation 0.8s, fade-to-white 1s 0.8s;
+    -webkit-animation:  hidden-animation 0.8s, fade-to-white 1s 0.8s;
+    animation-timing-function: ease-out;
+}
+
+#about p {
+    animation:          hidden-animation 1s, fade-to-white 1s 1s;
+    -moz-animation:     hidden-animation 1s, fade-to-white 1s 1s;
+    -webkit-animation:  hidden-animation 1s, fade-to-white 1s 1s;
+    animation-timing-function: ease-out;
+}
+
+.projects {
+    text-align: center;
+
+    animation:          hidden-animation 1s, fade-to-white 1s 1s;
+    -moz-animation:     hidden-animation 1s, fade-to-white 1s 1s;
+    -webkit-animation:  hidden-animation 1s, fade-to-white 1s 1s;
+    animation-timing-function: ease-out;
+}
+
+.projects h1 { padding-top: 5vh; }
+.projects h2 { letter-spacing: -0.055vw; }
+.projects > a { text-decoration: none; }
+
+.projects > span {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects .tile, .projects .tile .tile-hover {
+    float: left;
+    width: 25vw;
+    aspect-ratio: 4/3;
+    background-size: cover;
+    background-position: center;
+}
+.projects .tile-hover {
+    position: relative;
+    padding: 5vh 2vw 2vw 5vh;
+    opacity: 0;
+    background: black;
+    transition: opacity 0.05s linear;
+}
+.projects .tile-hover:hover {
+    opacity: 0.8;
+}
+.projects .tile-hover .small-text {
+    position: absolute;
+    bottom: 0.75vh;
+    right: 1vw;
+    font-size: 0.9vw;
+}
+.projects .tile-hover a {
+    color: white;
+}
