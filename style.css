@@ -50,14 +50,6 @@ h1 {
         clip-path: inset(100% 100% 100% 100%);
     }
 }
-@keyframes text-reveal-overflow {
-    0% {
-        clip-path: inset(100% 100% 100% 100%);
-    }
-    100% {
-        clip-path: inset(125% 100% 100% 100%);
-    }
-}
 
 @keyframes fade-to-white {
     0%      { opacity: 0; }
@@ -113,14 +105,14 @@ h1 {
     font-size: 8vw;
     letter-spacing: -0.4vw;
     text-align: right;
-    line-height: 0;
-    padding-top: 5%;
-    padding-bottom: 1.9%;
+    align-self: flex-end;
+    position: relative;
+    bottom: -3vw;
 
     clip-path: inset(125% 100% 100% 100%);
-    animation:          hidden-animation 0.3s, text-reveal 0.4s 0.3s, text-reveal-overflow 0.1s 0.7s;
-    -moz-animation:     hidden-animation 0.3s, text-reveal 0.4s 0.3s, text-reveal-overflow 0.1s 0.7s;
-    -webkit-animation:  hidden-animation 0.3s, text-reveal 0.4s 0.3s, text-reveal-overflow 0.1s 0.7s;
+    animation:          hidden-animation 0.3s, text-reveal 0.4s 0.3s;
+    -moz-animation:     hidden-animation 0.3s, text-reveal 0.4s 0.3s;
+    -webkit-animation:  hidden-animation 0.3s, text-reveal 0.4s 0.3s;
     animation-timing-function: ease-out;
 }
 
@@ -152,6 +144,8 @@ h1 {
 
 .projects {
     text-align: center;
+    margin: auto;
+    width: 75vw;
 
     animation:          hidden-animation 1s, fade-to-white 1s 1s;
     -moz-animation:     hidden-animation 1s, fade-to-white 1s 1s;
