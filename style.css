@@ -145,7 +145,7 @@ h1 {
 .projects {
     text-align: center;
     margin: auto;
-    width: 80%;
+    width: 90%;
 
     animation:          hidden-animation 1s, fade-to-white 1s 1s;
     -moz-animation:     hidden-animation 1s, fade-to-white 1s 1s;
