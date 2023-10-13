@@ -109,11 +109,11 @@ h1 {
     position: relative;
     bottom: -0.23em;
 
-    clip-path: inset(125% 100% 100% 100%);
+    /*clip-path: inset(125% 100% 100% 100%);
     animation:          hidden-animation 0.3s, text-reveal 0.4s 0.3s;
     -moz-animation:     hidden-animation 0.3s, text-reveal 0.4s 0.3s;
     -webkit-animation:  hidden-animation 0.3s, text-reveal 0.4s 0.3s;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-out;*/
 }
 
 #about {
