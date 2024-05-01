@@ -154,7 +154,7 @@ h1 {
     animation-timing-function: ease-out;
 }
 
-.projects h1 { padding-top: 1.5em; }
+/* .projects h1 { padding-top: 1.5em; } */
 .projects h2 { letter-spacing: -0.04em; }
 .projects > a { text-decoration: none; }
 
