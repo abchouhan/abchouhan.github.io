@@ -212,7 +212,7 @@ h1 {
     bottom: 0.75em;
     left: 1em;
     right: 1em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     align-items: center;
 }
 .small-text div {
@@ -229,4 +229,7 @@ h1 {
 }
 .projects .tile-hover a {
     color: white;
+}
+.jam-text {
+    font-size: 0.9em;
 }
